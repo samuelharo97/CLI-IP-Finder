@@ -57,6 +57,9 @@ func searchIps(c *cli.Context){
 }
 
 func searchServers(c *cli.Context){
+	fmt.Println("Servers's are being searched for.. wait for it..")
+	defer fmt.Println("All done.")
+	
 	host := c.String("host")
 
 	servers, err := net.LookupNS(host)
